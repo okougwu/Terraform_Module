@@ -5,7 +5,7 @@ resource "aws_vpc" "london" {
   enable_dns_hostnames    = true
 
   tags      = {
-    Name    = "${project_name}-vpc"
+    Name    = "${}-vpc"
   }
 }
 
@@ -14,7 +14,7 @@ resource "aws_internet_gateway" "internet_gateway" {
   vpc_id    = aws_vpc.london.id
 
   tags      = {
-    Name    = "${project_name}-igw"
+    Name    = "${}-igw"
   }
 }
 
