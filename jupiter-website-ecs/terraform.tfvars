@@ -1,0 +1,9 @@
+region=
+project_name=
+vpc_cidr=
+public_subnet_1_cidr=
+public_subnet_2_cidr=
+private_app_subnet_1_cidr=
+private_app_subnet_2_cidr=
+private_data_subnet_1_cidr=
+private_data_subnet_2_cidr=
