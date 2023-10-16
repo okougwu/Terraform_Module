@@ -75,7 +75,7 @@ resource "aws_route_table_association" "public_subnet_az2_route_table_associatio
 resource "aws_subnet" "private_app_subnet_1" {
   vpc_id                   = aws_vpc.london.id
   cidr_block               = var.private_app_subnet_1_cidr
-  availability_zone        = ws_availability_zones.available_zones.names[0]
+  availability_zone        = aws_availability_zones.available_zones.names[0]
   map_public_ip_on_launch  = false
 
   tags      = {
@@ -87,7 +87,7 @@ resource "aws_subnet" "private_app_subnet_1" {
 resource "aws_subnet" "private_app_subnet_2" {
   vpc_id                   = aws_vpc.london.id
   cidr_block               = var.private_app_subnet_2_cidr
-  availability_zone        = ws_availability_zones.available_zones.names[1]
+  availability_zone        = aws_availability_zones.available_zones.names[1]
   map_public_ip_on_launch  = false
 
   tags      = {
@@ -99,7 +99,7 @@ resource "aws_subnet" "private_app_subnet_2" {
 resource "aws_subnet" "private_data_subnet_1" {
   vpc_id                   = aws_vpc.london.id
   cidr_block               = var.private_data_subnet_1_cidr
-  availability_zone        = ws_availability_zones.available_zones.names[0]
+  availability_zone        = aws_availability_zones.available_zones.names[0]
   map_public_ip_on_launch  = false
 
   tags      = {
